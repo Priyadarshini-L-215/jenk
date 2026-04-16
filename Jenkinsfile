@@ -3,20 +3,20 @@ pipeline {
 
     environment {
         DOCKERHUB_CREDENTIALS = 'Docker_cred_c2'
-        IMAGE_NAME = 'shilpakevala/new_docker_image'
+        IMAGE_NAME = 'priyadrshini/new_docker_image'
     }
 
     stages {
 
         stage('Build Java Application') {
             steps {
-                bat 'javac HelloWorld.java'
+                bat 'javac Main.java'
             }
         }
 
         stage('Run Java Program') {
             steps {
-                bat 'java HelloWorld'
+                bat 'java Main'
             }
         }
 
